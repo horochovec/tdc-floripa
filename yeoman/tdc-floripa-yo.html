@@ -1,0 +1,45 @@
+<dom-module id="tdc-floripa-yo">
+
+    <template>
+        {{mensagem}}
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'tdc-floripa-yo',
+
+    properties: {
+
+        mensagem: {
+            type: String,
+            value: null,
+            observer: '_mensagemChange'
+        }
+
+    },
+
+    created: function() {
+        console.log("created");
+    },
+
+    ready: function() {
+        console.log("ready");
+    },
+
+    attached: function() {
+        console.log("attached");
+    },
+
+    detached: function() {
+        console.log("detached");
+    },
+
+    _mensagemChange: function(newVal, oldVal) {
+        console.log("newVal:" + newVal);
+        console.log("oldVal:" + oldVal);
+    }
+
+});
+</script>

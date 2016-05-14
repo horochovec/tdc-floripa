@@ -1,0 +1,35 @@
+<dom-module id="tdc-events">
+
+    <template></template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'tdc-events',
+
+    created: function() {
+        console.log("tdc-events created");
+    },
+
+    ready: function() {
+        var _this = this;
+        var date = new Date();
+        console.log("tdc-events ready " + date );
+        setInterval(function() {
+            var date = new Date();
+            console.log("tdc-events timer " + date);
+            _this.fire('timer');
+        }, 3000);
+    },
+
+    attached: function() {
+        console.log("tdc-events attached");
+    },
+
+    detached: function() {
+        console.log("tdc-events detached");
+    }
+
+});
+</script>

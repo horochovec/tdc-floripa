@@ -1,0 +1,34 @@
+<dom-module id="tdc-app">
+
+    <template>
+    	<tdc-events on-timer="onTimer"></tdc-events>
+    </template>
+
+</dom-module>
+
+<script>
+Polymer({
+    is: 'tdc-app',
+
+    created: function() {
+        console.log("tdc-app created");
+    },
+
+    ready: function() {
+        console.log("tdc-app ready");
+    },
+
+    attached: function() {
+        console.log("tdc-app attached");
+    },
+
+    detached: function() {
+        console.log("tdc-app detached");
+    },
+
+    onTimer: function(event) {
+    	console.log("tdc-app onTimer");	
+    }
+
+});
+</script>
